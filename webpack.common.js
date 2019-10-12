@@ -5,7 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const QcCOSPlugin = require('webpack-cos-plugin')
 
 module.exports = {
-    mode: "development",
     entry: './src/index.js',
     output: {
         filename: 'bundle.[hash].js',

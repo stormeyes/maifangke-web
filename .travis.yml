@@ -19,4 +19,4 @@ before_install:
 - ssh-add /tmp/deploy_rsa
 deploy:
   provider: script
-  script: scp dist/index.html root@kongkongyzt.com:/usr/local/nginx/sites/maifangke -o StrictHostKeyChecking=no
+  script: scp -o StrictHostKeyChecking=no dist/index.html root@kongkongyzt.com:/usr/local/nginx/sites/maifangke

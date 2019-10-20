@@ -1,7 +1,12 @@
 language: node_js
 node_js:
   - "8"
+cache:
+  directories:
+    - node_modules
 
 script:
+  - sed -i "s/SecretId/${SecretId}/" webpack.prod.js
+  - sed -i "s/SecretKey/${SecretKey}/" webpack.prod.js
   - npm run release
   - ls

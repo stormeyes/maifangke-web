@@ -14,7 +14,7 @@ import ShenAccount from './components/ShenAccount.vue'
 Vue.use(ElementUI)
 Vue.use(VueRouter)
 
-Vue.config.devtools = true;
+Vue.config.devtools = (MODE == 'development');
 
 const routes = [
     { path: '/', component: House },

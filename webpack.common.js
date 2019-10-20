@@ -5,7 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const QcCOSPlugin = require('webpack-cos-plugin')
 
 module.exports = {
-    mode: "development",
     entry: './src/index.js',
     output: {
         filename: 'bundle.[hash].js',
@@ -57,18 +56,5 @@ module.exports = {
         new webpack.DefinePlugin({
             MODE: JSON.stringify("dev")
         }),
-        // new QcCOSPlugin({
-        //     auth: {
-        //         SecretId: 'AKIDMnxCUBusqPdqCwrALvDwxW1TEcWxlUn6',
-        //         SecretKey: 'JdATOWS43FXKwZCZX4iyaElMzk788LWD',
-        //     },
-        //     bucket: {
-        //         Bucket: 'shenfangke-1251435248',
-        //         Region: 'ap-guangzhou',
-        //     },
-        //     cosBaseDir: '/',
-        //     project: '/',
-        //     enableLog: true
-        // })
     ]
 };

@@ -18,7 +18,7 @@
                 <!--<el-menu-item index="/rent-house">租房</el-menu-item>-->
                 <!--<el-menu-item index="8">计算器</el-menu-item>-->
                 <!--<el-menu-item index="9">融资工具</el-menu-item>-->
-                <el-menu-item index="/shen-account">如何落户</el-menu-item>
+                <el-menu-item index="/shen-account">深圳户口</el-menu-item>
                 <el-menu-item index="/faq">买房精华问答</el-menu-item>
                 <el-menu-item index="/about">关于作者</el-menu-item>
                 <!--<el-menu-item index="/transaction">一篇文章理解深圳交易流程</el-menu-item>-->

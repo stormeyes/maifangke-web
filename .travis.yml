@@ -6,7 +6,7 @@ cache:
     - node_modules
 
 script:
-  - sed -i "s/SecretId/SecretId: '${SecretId}'/" webpack.prod.js
-  - sed -i "s/SecretKey/SecretKey: '${SecretKey}'/" webpack.prod.js
+  - sed -i "s/theSecretId/${SecretId}/" webpack.prod.js
+  - sed -i "s/theSecretKey/${SecretKey}/" webpack.prod.js
   - npm run release
   - ls

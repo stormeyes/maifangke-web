@@ -7,8 +7,8 @@ module.exports = merge(common, {
     plugins: [
         new QcCOSPlugin({
             auth: {
-                SecretId: 'AKIDMnxCUBusqPdqCwrALvDwxW1TEcWxlUn6',
-                SecretKey: 'JdATOWS43FXKwZCZX4iyaElMzk788LWD',
+                SecretId: theSecretId,
+                SecretKey: theSecretKey,
             },
             bucket: {
                 Bucket: 'shenfangke-1251435248',

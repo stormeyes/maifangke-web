@@ -4,6 +4,9 @@ const QcCOSPlugin = require('webpack-cos-plugin');
 
 module.exports = merge(common, {
     mode: 'production',
+    output: {
+        publicPath: '//shenfangke-1251435248.cos.ap-guangzhou.myqcloud.com/',
+    },
     plugins: [
         new QcCOSPlugin({
             auth: {

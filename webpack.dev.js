@@ -7,8 +7,4 @@ module.exports = merge(common, {
     devServer: {
         contentBase: './dist'
     }
-<<<<<<< HEAD
 });
-=======
- });
->>>>>>> 8b91355fc2e5dacd321acb2940a182f6fc8741c9

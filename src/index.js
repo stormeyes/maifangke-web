@@ -14,7 +14,7 @@ import ShenAccount from './components/ShenAccount.vue'
 Vue.use(ElementUI)
 Vue.use(VueRouter)
 
-Vue.config.devtools = (MODE == 'development');
+Vue.config.devtools = (process.env.NODE_ENV == 'development');
 
 const routes = [
     { path: '/', component: House },
@@ -27,7 +27,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-    mode: MODE == 'production' ? 'history' : 'hash',
+    mode: process.env.NODE_ENV == 'production' ? 'history' : 'hash',
     routes
 });
 

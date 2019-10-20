@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require('webpack')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const QcCOSPlugin = require('webpack-cos-plugin')
 
 module.exports = {
     entry: './src/index.js',

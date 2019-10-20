@@ -22,6 +22,7 @@
     "babel-plugin-component": "^1.1.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "cos-webpack": "^1.0.6",
+    "cross-env": "^6.0.3",
     "uglify-js": "^3.6.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack-cos-plugin": "^1.1.2",
@@ -31,8 +32,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --open --config webpack.dev.js",
-    "build": "webpack --config webpack.dev.js",
-    "product": "webpack --config webpack.prod.js"
+    "build": "cross-env NODE_ENV=development webpack --config webpack.dev.js",
+    "release": "cross-env NODE_ENV=production webpack --config webpack.prod.js"
   },
   "keywords": [
     "深圳",

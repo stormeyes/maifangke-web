@@ -3,7 +3,7 @@ const axios = require('axios').default;
 const fetch_data = function (method, ...params) {
     return axios({
         method: 'post',
-        url: process.env.NODE_ENV == 'production' ? "http://maifangke.net:6778" : "http://127.0.0.1:6061",
+        url: process.env.NODE_ENV == 'production' ? "http://api.maifangke.net" : "http://127.0.0.1:6061",
         headers: {
             'Content-type': 'application/json; charset=utf-8'
         },

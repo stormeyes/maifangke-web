@@ -18,7 +18,7 @@
                     <el-table-column prop="happenDate" label="调整日期"></el-table-column>
                     <el-table-column :formatter="toHouseUrl" label="查看">
                         <template slot-scope="scope">
-                            <el-button @click="toHouseUrl(scope.row)" type="text" size="small">查看</el-button>
+                            <el-button @click="toHouseUrl(scope.row)" type="text" size="small">房源链接</el-button>
                         </template>
                     </el-table-column>
                 </el-table>
@@ -38,6 +38,11 @@
                     <el-table-column prop="afterChangePrice" label="调后价"></el-table-column>
                     <el-table-column prop="minus" label="差价"></el-table-column>
                     <el-table-column prop="happenDate" label="调整日期"></el-table-column>
+                    <el-table-column :formatter="toHouseUrl" label="查看">
+                        <template slot-scope="scope">
+                            <el-button @click="toHouseUrl(scope.row)" type="text" size="small">房源链接</el-button>
+                        </template>
+                    </el-table-column>
                 </el-table>
             </el-tab-pane>
         </el-tabs>

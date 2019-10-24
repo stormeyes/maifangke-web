@@ -23,6 +23,7 @@
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "cos-webpack": "^1.0.6",
     "cross-env": "^6.0.3",
+    "cz-conventional-changelog": "^3.0.2",
     "uglify-js": "^3.6.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack-cos-plugin": "^1.1.2",
@@ -42,5 +43,10 @@
     "小区"
   ],
   "author": "kongkongyzt",
-  "license": "MIT"
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }

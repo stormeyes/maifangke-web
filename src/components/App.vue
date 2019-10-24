@@ -13,7 +13,7 @@
                 <el-menu-item index="/bargains">成交</el-menu-item>
                 <!--<el-menu-item index="/school">学位</el-menu-item>-->
                 <!--<el-menu-item index="4">笋盘</el-menu-item>-->
-                <el-menu-item index="/analysis">小区投资分析</el-menu-item>
+                <el-menu-item index="/analysis">小区与区域分析</el-menu-item>
                 <el-menu-item index="/rank">涨跌榜</el-menu-item>
                 <!--<el-menu-item index="/rent-house">租房</el-menu-item>-->
                 <!--<el-menu-item index="8">计算器</el-menu-item>-->

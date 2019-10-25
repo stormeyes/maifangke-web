@@ -83,7 +83,7 @@
                     </el-table-column>
                     <el-table-column width="80" prop="houseType" label="类型">
                     </el-table-column>
-                    <el-table-column fixed="right" label="操作" width="120">
+                    <el-table-column label="操作" width="120">
                         <template slot-scope="scope">
                             <el-button @click="toBargainUrl(scope.row)" type="text" size="small">成交链接</el-button>
                         </template>

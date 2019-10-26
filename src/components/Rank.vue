@@ -1,7 +1,7 @@
 <template>
     <el-main>
         <el-tabs type="border-card">
-            <el-tab-pane label="涨价房源排行">
+            <el-tab-pane label="七日内涨价房源排行">
                 <el-table
                         v-loading="is_querying_up_rank"
                         element-loading-text="拼命加载中"
@@ -23,7 +23,7 @@
                     </el-table-column>
                 </el-table>
             </el-tab-pane>
-            <el-tab-pane label="降价房源排行">
+            <el-tab-pane label="七日内降价房源排行">
                 <el-table
                         v-loading="is_querying_down_rank"
                         element-loading-text="拼命加载中"

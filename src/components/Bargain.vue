@@ -81,6 +81,8 @@
                     </el-table-column>
                     <el-table-column width="120" prop="bargainDuration" label="成交周期(天)">
                     </el-table-column>
+                    <el-table-column width="120" :formatter="schoolNames" label="对应学位">
+                    </el-table-column>
                     <el-table-column width="80" prop="houseType" label="类型">
                     </el-table-column>
                     <el-table-column label="操作" width="120">
@@ -126,6 +128,9 @@
             },
             roomAndTing: function(row) {
                 return `${row.room}室${row.ting}厅`;
+            },
+            schoolNames: function(row) {
+                return row.schoolNames.replace("\n", " ");
             },
             toBargainUrl: function(row) {
                 window.open(`https://sz.lianjia.com/chengjiao/${row.houseId}.html`, '_blank')

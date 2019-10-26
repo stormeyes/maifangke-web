@@ -130,7 +130,7 @@
                 return `${row.room}室${row.ting}厅`;
             },
             schoolNames: function(row) {
-                return row.schoolNames.replace("\n", " ");
+                return row.schoolNames.replace("\n", " ") || "-";
             },
             toBargainUrl: function(row) {
                 window.open(`https://sz.lianjia.com/chengjiao/${row.houseId}.html`, '_blank')

@@ -81,7 +81,7 @@
                     </el-table-column>
                     <el-table-column width="120" prop="bargainDuration" label="成交周期(天)">
                     </el-table-column>
-                    <el-table-column width="120" :formatter="schoolNames" label="对应学位">
+                    <el-table-column width="240" :formatter="schoolNames" label="对应学位">
                     </el-table-column>
                     <el-table-column width="80" prop="houseType" label="类型">
                     </el-table-column>

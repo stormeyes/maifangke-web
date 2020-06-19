@@ -15,8 +15,3 @@ jobs:
         if [ -n "$found_secret_id" ] ; then
           exit 1
         fi
-
-        found_secret_key=`git diff master..${{ GITHUB_HEAD_REF }} | grep -E '[^a-zA-Z0-9]([a-zA-Z0-9]{32})([^a-zA-Z0-9]|$)'`
-        if [ -n "$found_secret_key" ] ; then
-          exit 1
-        fi

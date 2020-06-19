@@ -10,12 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.head_ref }}
       - run: |
           git branch | xargs echo
-          found_secret_id=`git diff master..${GITHUB_HEAD_REF} | grep -E '[^a-zA-Z0-9](AKID[a-zA-Z0-9]{32})([^a-zA-Z0-9]|$)'`
+          found_secret_id=`git diff master..origin/${GITHUB_HEAD_REF} | grep -E '[^a-zA-Z0-9](AKID[a-zA-Z0-9]{32})([^a-zA-Z0-9]|$)'`
           if [ -n "$found_secret_id" ] ; then
             exit 1
           fi

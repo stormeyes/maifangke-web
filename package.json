@@ -4,6 +4,7 @@
   "description": "深房客,选个好房子",
   "main": "src/index.js",
   "dependencies": {
+    
     "axios": "^0.19.0",
     "css-loader": "^3.2.0",
     "element-ui": "^2.12.0",

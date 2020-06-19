@@ -10,11 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - run: git checkout ${GITHUB_HEAD_REF}
       - run: |
-          ls -a
+          git fetch --no-tags --depth=1 origin master
+          git checkout -b master
+          git checkout -b ${GITHUB_HEAD_REF}
           git branch | xargs echo
           found_secret_id=`git diff master..${GITHUB_HEAD_REF} | grep -E '[^a-zA-Z0-9](AKID[a-zA-Z0-9]{32})([^a-zA-Z0-9]|$)'`
           if [ -n "$found_secret_id" ] ; then

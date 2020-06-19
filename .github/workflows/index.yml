@@ -14,4 +14,4 @@ jobs:
           git fetch --no-tags --depth=1 origin master
           git checkout -b master
           git checkout -b ${GITHUB_HEAD_REF}
-          (git diff master..${GITHUB_HEAD_REF} | grep -E '[^a-zA-Z0-9](AKID[a-zA-Z0-9]{32})([^a-zA-Z0-9]|$)') && exit 1
+          (git diff master..${GITHUB_HEAD_REF} | grep -E '[^a-zA-Z0-9](AKID[a-zA-Z0-9]{32})([^a-zA-Z0-9]|$)') && exit 5

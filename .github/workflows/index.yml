@@ -1,0 +1,19 @@
+name: GitHub Actions Demo
+on:
+  pull_request:
+    branches:    
+      - master
+
+jobs:
+  my-job:
+    name: 这是我的job的描述
+    runs-on: ubuntu-latest
+    steps:
+    - name: 输出一个hello
+      env:
+        MY_VAR: Hi there! My name is
+        FIRST_NAME: Mona
+        MIDDLE_NAME: The
+        LAST_NAME: Octocat
+      run: |
+        echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.

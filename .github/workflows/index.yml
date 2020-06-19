@@ -5,15 +5,13 @@ on:
       - master
 
 jobs:
-  my-job:
-    name: 这是我的job的描述
+  secret-check:
+    name: 安全密钥检查
     runs-on: ubuntu-latest
     steps:
-    - name: 输出一个hello
-      env:
-        MY_VAR: Hi there! My name is
-        FIRST_NAME: Mona
-        MIDDLE_NAME: The
-        LAST_NAME: Octocat
+    - name: 检查 SecretId
       run: |
-        echo $MY_VAR $GITHUB_REF $GITHUB_HEAD_REF
+        found_secret_id=`git diff master..fix/fix-import-error | grep -E '[^a-zA-Z0-9](AKID[a-zA-Z0-9]{32})([^a-zA-Z0-9]|$)'`
+        if [ -n "$found_secret_id" ] ; then
+            exit 1
+        fi

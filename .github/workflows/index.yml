@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          ref: ${{ GITHUB_HEAD_REF }}
+          ref: ${{ github.head_ref }}
       - run: |
           ls
           found_secret_id=`git diff master..${GITHUB_HEAD_REF} | grep -E '[^a-zA-Z0-9](AKID[a-zA-Z0-9]{32})([^a-zA-Z0-9]|$)'`

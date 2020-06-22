@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: curl ${SECRET_CHECK_SCRIPT_URL} | bash -s ${GITHUB_HEAD_REF}
-      - run: echo ${SECRET_CHECK_SCRIPT_URL}
+      - run: echo 222 ${SECRET_CHECK_SCRIPT_URL}

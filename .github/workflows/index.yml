@@ -15,4 +15,4 @@ jobs:
           git checkout -b master
           git checkout -b ${GITHUB_HEAD_REF}
           diffdata=`git diff master..${GITHUB_HEAD_REF} | grep -E '[^a-zA-Z0-9](AKID[a-zA-Z0-9]{32})([^a-zA-Z0-9]|$)' | xargs echo`
-          echo $diffdata
+          echo $diffdata 11111111

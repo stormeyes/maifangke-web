@@ -2,3 +2,4 @@
 git clone --depth=1 https://github.com/stormeyes/maifangke-web
 cd maifangke-web
 ls
+git branch | xargs echo

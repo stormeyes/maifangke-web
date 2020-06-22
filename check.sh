@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 git clone https://github.com/stormeyes/maifangke-web
 cd maifangke-web
+echo 'Gone to check diff of master and origin/'$1
 found_secret_id=`git diff master..origin/$1 | grep -E '[^a-zA-Z0-9](AKID[a-zA-Z0-9]{32})([^a-zA-Z0-9]|$)'`	
 if [ -n "$found_secret_id" ] ; then	
   echo 发现 SecretId 泄露: $found_secret_id	

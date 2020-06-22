@@ -14,5 +14,4 @@ jobs:
           git fetch --no-tags --depth=1 origin master
           git checkout -b master
           git checkout -b ${GITHUB_HEAD_REF}
-          diffdata=`git diff master..${GITHUB_HEAD_REF} | grep -E 'a' | xargs echo`
-          echo $diffdata 11111111
+          diffdata=`git diff master..${GITHUB_HEAD_REF} | grep -E 'a' | xargs echo`;echo $diffdata 11111111

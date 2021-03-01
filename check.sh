@@ -13,3 +13,4 @@ if [ -n "$found_secret_key" ] ; then
   echo 发现 SecretKey 泄露: $found_secret_key	
   exit 1
 fi
+fdgfdgfd
